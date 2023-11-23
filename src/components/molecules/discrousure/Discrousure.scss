@@ -1,0 +1,51 @@
+@import '../../../assets/variables';
+
+.discrousure {
+  background-color: #fff;
+  border-radius: 5px;
+
+  &__title {
+    padding: 10px 10px;
+    font-weight: bold;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__checkbox {
+    display: none;
+    &:checked ~ .discrousure__content {
+      display: block;
+    }
+    &:checked ~ .discrousure__title .discrousure__toggle::after {
+      transform: rotate(135deg);
+    }
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 14px;
+    cursor: pointer;
+    &::after {
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid #666;
+      border-bottom: 2px solid #666;
+      transform: rotate(-45deg);
+      transition: 0.2s;
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 20px;
+    font-size: 1.3rem;
+    border-top: 1px solid #ddd;
+  }
+}

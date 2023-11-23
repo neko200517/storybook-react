@@ -1,0 +1,41 @@
+@import '../../../assets/variables';
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+
+  // Selectの矢印
+  &::after {
+    content: '';
+    position: absolute;
+    border: 4px solid #333;
+    border-bottom: 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    top: calc(50% - 3px);
+    right: 10px;
+    width: 0;
+    height: 0;
+  }
+
+  &--disabled {
+    &::after {
+      border-top-color: #aaa;
+    }
+  }
+
+  // Selectの外枠
+  .select {
+    appearance: none; // Selectの矢印を非表示
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 5px 25px 5px 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    &:disabled {
+      pointer-events: none;
+      background-color: #f1f1f1;
+      color: #aaa;
+    }
+  }
+}

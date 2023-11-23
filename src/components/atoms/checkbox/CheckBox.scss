@@ -1,0 +1,70 @@
+@import '../../../assets/variables';
+
+.checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__input {
+    appearance: none; // ブラウザ標準のチェックボックスを非表示
+    height: 1.6rem;
+    width: 0;
+
+    // チェックボックスの枠
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 2px solid #999;
+      border-radius: 2px;
+      background-color: #fff;
+    }
+
+    // チェックマーク
+    &:checked {
+      &::before {
+        border-color: $themeColor;
+        background-color: $themeColor;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 6px;
+        left: 3px;
+        top: calc(50% - 4.5px);
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    padding-left: 24px;
+    display: inline-block;
+    color: #333;
+  }
+}
+
+.checkbox-group {
+  .checkbox:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .checkbox {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

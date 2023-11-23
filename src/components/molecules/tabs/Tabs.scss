@@ -1,0 +1,37 @@
+@import '../../../assets/variables';
+
+.tabs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+
+  &__item {
+    padding: 8px 15px;
+    font-size: 1.6rem;
+    margin-bottom: -1px;
+    cursor: pointer;
+    &:hover {
+      background-color: #ededed;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 7px;
+    }
+    &--active {
+      border-bottom: 3px solid $themeColor;
+      padding-bottom: 5px;
+      pointer-events: none;
+    }
+    &--disabled {
+      color: #ccc;
+      pointer-events: none;
+    }
+  }
+}
+
+.tab-container {
+  &__content {
+    padding: 20px;
+    font-size: 1.3rem;
+  }
+}

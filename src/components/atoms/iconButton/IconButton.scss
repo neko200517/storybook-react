@@ -1,0 +1,26 @@
+@import '../../../assets/variables';
+
+.btn--icon {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px 8px 8px;
+
+  .btn__label {
+    margin-left: 5px;
+  }
+}
+
+.btn--icon-right {
+  flex-direction: row-reverse;
+  padding: 8px 8px 8px 16px;
+
+  .btn__label {
+    margin-left: 0;
+    margin-right: 5px;
+  }
+}
+
+.btn--icon-only {
+  min-width: auto;
+  padding: 8px;
+}

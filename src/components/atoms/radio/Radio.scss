@@ -1,0 +1,69 @@
+@import '../../../assets/variables';
+
+.radio {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__input {
+    appearance: none; // ブラウザ標準のラジオボタンを非表示
+    height: 1.6rem;
+    width: 0;
+
+    // ラジオボタンの枠
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 2px solid #999;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+
+    // ラジオボタンのチェック
+    &:checked {
+      &::before {
+        border-color: $themeColor;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        top: 50%;
+        left: 4px;
+        transform: translateY(-50%);
+        background-color: $themeColor;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    padding-left: 24px;
+    display: inline-block;
+    color: #333;
+  }
+}
+
+.radio-group {
+  .radio:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .radio {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

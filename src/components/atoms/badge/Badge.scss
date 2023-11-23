@@ -1,0 +1,37 @@
+.badge {
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+  min-height: 17px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
+
+  &--label {
+    min-width: 40px;
+    padding: 3px 6px;
+  }
+
+  &--accept {
+    color: #333;
+    background-color: lime;
+  }
+
+  &--warning {
+    color: #333;
+    background-color: yellow;
+  }
+
+  &--error {
+    color: white;
+    background-color: red;
+  }
+
+  &--count {
+    color: white;
+    background-color: red;
+    padding: 3px 4px;
+    min-width: 17px;
+    user-select: none;
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../../assets/variables';
+
+.toggle {
+  // 外側
+  display: inline-block;
+  appearance: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  position: relative;
+
+  // 〇を描画
+  &::before {
+    content: '';
+    appearance: none;
+    background-color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 13px;
+    cursor: pointer;
+    transition: 0.3s; // ON/OFFアニメの時間
+    transition-property: 'left';
+    position: absolute;
+    top: 1px;
+    left: 31px;
+  }
+
+  // OFFの文字
+  &::after {
+    content: 'OFF';
+    position: absolute;
+    font-size: 12px;
+    top: calc(50% - 6px);
+    left: 4px;
+    color: #fff;
+  }
+
+  // ON
+  &:checked {
+    background-color: $themeColor;
+    border: 1px solid $themeColor;
+
+    // ONになったときに左に移動
+    &::before {
+      left: 1px;
+    }
+
+    // ONの文字
+    &::after {
+      content: 'ON';
+      right: 6px;
+      left: inherit;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.text-input {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 5px 10px;
+  height: 30px;
+
+  &::placeholder {
+    color: #aaa;
+  }
+
+  &--error {
+    border-color: red;
+  }
+
+  &:disabled {
+    border-color: #ccc;
+    background-color: #f1f1f1;
+  }
+}
+
+.text-area {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 5px 10px;
+
+  &::placeholder {
+    color: #aaa;
+  }
+
+  &--error {
+    border-color: red;
+  }
+
+  &:disabled {
+    border-color: #ccc;
+    background-color: #f1f1f1;
+  }
+}

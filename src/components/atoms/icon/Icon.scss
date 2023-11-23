@@ -1,0 +1,46 @@
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+
+  &--bgi {
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.icon--info-black {
+      background-image: url('../../../assets/baseline_info_black_24dp.png');
+    }
+    &.icon--info-white {
+      background-image: url('../../../assets/baseline_info_white_24dp.png');
+    }
+  }
+
+  &--material {
+    font-size: 24px;
+
+    &.icon--warning {
+      color: red;
+    }
+  }
+
+  &--svg {
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+    &.icon--delete {
+      svg {
+        path {
+          fill: #aaa;
+        }
+      }
+    }
+    &.icon--warning {
+      svg {
+        fill: red;
+      }
+    }
+  }
+}

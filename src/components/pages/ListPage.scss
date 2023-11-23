@@ -1,0 +1,21 @@
+.list-page {
+  .table-container {
+    height: calc(100vh - 436px);
+  }
+}
+
+.flex {
+  display: flex;
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--gap24 {
+    gap: 24px;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+}

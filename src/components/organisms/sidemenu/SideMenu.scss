@@ -1,0 +1,27 @@
+@import '../../../assets/variables';
+
+.sidemenu {
+  .global-navi {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-top: 24px;
+    border-right: 1px solid #999;
+    height: calc(100dvh - 66px);
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 16px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #333;
+
+      &:hover {
+        background-color: lighten($color: $themeColor, $amount: 40%);
+        color: $themeColor;
+      }
+    }
+  }
+}
